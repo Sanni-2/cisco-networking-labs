@@ -1,0 +1,47 @@
+en
+conf t
+HOSTname F1-SW
+username Talib Privi 15 secret Cisco@123
+line console 0
+login local
+exit
+
+
+int f0/1
+switchport mode trunk
+switchport trunk native vlan 99
+exit
+
+vtp domain WGU
+VTP MODE CLIENT
+VTP PASSword Cisco@123
+
+int vlan 30
+ip addr 192.168.30.2 255.255.255.0
+exit
+
+ip default-gateway 192.168.30.1
+
+line vty 0 15
+login local
+logging synchronous
+transport input ssh
+exit
+
+
+IP domain-name WGU
+crypto Key Generate Rsa General-keys Modulus 2048
+IP SSH Version 2
+
+int ran f0/3-24, g0/1-2
+switchport mode access
+switchport access vlan 999
+shutdown
+exit
+
+int f0/2
+switchport mode access
+switchport access vlan 10
+exit
+
+do wr
