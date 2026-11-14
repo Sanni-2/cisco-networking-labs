@@ -9,3 +9,7 @@ Demonstrates VTP-based VLAN distribution, Switch Virtual Interfaces (SVIs), inte
 
 ### [WLAN Network Segmentation](./WLN-network-segmentation)
 Demonstrates network segmentation using VLANs, trunking, DHCP relay, wireless LAN infrastructure, and centralized wireless management.
+
+### [Enterprise Network Mega Lab](./Enterprise-Network-Mega-Lab/)
+
+Comprehensive Cisco Packet Tracer enterprise networking lab covering VLANs, EtherChannel, OSPF, HSRP, Rapid PVST+, IPv6, NAT/PAT, wireless networking, and network security.
